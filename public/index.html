@@ -29,6 +29,16 @@
         socket.on('mensaje', function(data){
             console.log('recibiendo mensaje del servidor: ', data);
         });
+        socket.on('mensaje_desde_flutter_status',  (data)=>{
+            console.log('se ha recibido un mensaje desde flutter status (en el index.html): ', data);
+            
+        });
+                    
+        socket.on('civilizaciones_activas', (data)=>{
+            console.clear();
+            console.log('desde el html: se ha envíado las civilizaciones: ');
+            console.table(data);
+        });
     </script>
 </body>
 </html>
